@@ -1,0 +1,64 @@
+* {
+    text-align: left;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    background: #222831;
+}
+
+#main {
+    color: #00adb5;
+    height: 100%;
+    overflow-y: auto;
+    border: 3px;
+    border-color: white;
+}
+
+#head {
+    background-color: #393e46;
+    width: 100px;
+    height: 20px;
+    margin: 10px;
+    margin-left: 130px;
+    color: #00adb5;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    font-family: Helvetica, sans-serif;
+    border-radius: 5px;
+    -webkit-app-region: drag;
+    text-align: center;
+}
+
+#form {
+    background-color: #393e46;
+    width: 340px;
+    height: 240px;
+    margin: 10px;
+    color: #00adb5;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    font-family: Helvetica, sans-serif;
+    border-radius: 5px;
+}
+
+#but-can {
+    background-color: #393e46;
+    border-radius: 5px;
+    color: #00adb5;
+    padding: 5px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+}
+
+#but-sub {
+    background-color: #393e46;
+    border-radius: 5px;
+    color: #00adb5;
+    padding: 5px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+}

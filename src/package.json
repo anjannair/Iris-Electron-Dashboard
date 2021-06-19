@@ -1,0 +1,20 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "A dashboard for laptops",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Anjan Nair",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "alertifyjs": "^1.13.1",
+    "node-wifi": "^2.0.14"
+  },
+  "devDependencies": {
+    "electron": "^13.0.1",
+    "eslint": "^7.28.0"
+  }
+}

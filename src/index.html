@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="node_modules/alertifyjs/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="node_modules/alertifyjs/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="node_modules/alertifyjs/build/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="node_modules/alertifyjs/build/css/themes/bootstrap.min.css" />
+    <title>Iris</title>
+</head>
+
+<body style="-webkit-user-select: none;user-select: none">
+
+    <header id="titlebar">
+        <div id="drag-region">
+            <div id="extend"></div>
+            <div id="window-controls">
+                <div class="button" id="min-button">
+                    <img class="icon" srcset="icons/min-w-10.png 1x" draggable="false" />
+                </div>
+                <div class="button" id="close-button">
+                    <img class="icon" srcset="icons/close-w-10.png 1x" draggable="false" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <div id="window-title" style="padding-top: 30px; padding-left: 15px;">
+            <div id="battprog">
+                <div id="batt"></div>
+            </div>
+            <div id="battfront" style="padding-top: 5px;">
+            </div>
+            <div id="zap" style="padding-left: 7px;"></div>
+            <div id="wifi" style="padding-left: 15px;"></div>
+        </div>
+        <div style="display:flex; flex-wrap:nowrap;">
+            <!-- Internet speed begins here -->
+            <div>
+                <h1 id="internet">INTERNET SPEED</h1>
+                <div id="download">
+                    DOWNLOAD
+                    <img src="icons/speedometer.png"></img>
+                    <h1 id="speed"></h1>
+                    <canvas id="graph" width="150" height="90"></canvas>
+                </div>
+                <div id="upload">
+                    UPLOAD
+                    <img src="icons/speedometer.png"></img>
+                    <h1 id="speed-1"></h1>
+                    <canvas id="graph-1" width="150" height="90"></canvas>
+                </div>
+            </div>
+            <!-- Internet speed ends here -->
+            <div>
+                <h1 id="clock">WORLD TIME</h1>
+                <div style="display:flex; flex-wrap:nowrap;">
+                    <h1 id="lcountry"></h1>
+                    <div>
+                        <select id="fcountry" name="country">
+                        </select>
+                    </div>
+                </div>
+                <div style="display:flex; flex-wrap:nowrap;">
+                    <canvas id="canvas" width="200" height="200"
+                        style="background-color:#393e46;margin-left:20px;border-radius: 5px; margin-top: 5px;"></canvas>
+                    <canvas id="canvas-1" width="200" height="200"
+                        style="background-color:#393e46;margin-left:20px;border-radius: 5px;margin-top: 5px;"></canvas>
+                </div>
+                <div id="music">
+                    <h1 style="font-weight: bold;font-size: large;font-family: Helvetica, sans-serif;">LOFI MUSIC</h1>
+                    <h1 id="meta"
+                        style="font-weight: bold;font-size: large;font-family: Helvetica, sans-serif;color:white;text-align: left;padding-top: 10px; padding-left: 5px;">
+                    </h1>
+                    <audio id="myAudio">
+                        <!-- https://radioindia.net/radio/mirchi98/icecast.audio -->
+                        <source src="https://coderadio-relay-blr.freecodecamp.org/radio/8010/radio.mp3"
+                            type="audio/mpeg">
+                    </audio>
+                    <div id="myProgress" style="padding-top: 20px;">
+                        <div id="myBar"></div>
+                    </div>
+                    <div id="play-pause">
+                        <img id="play" class="icon" srcset="icons/play.svg" draggable="false"
+                            style="padding-top: 20px;cursor: pointer;" />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="schedule">
+                    UPCOMING (IN DEV)
+                    <img id="add" class="icon" srcset="icons/plus-circle.svg" draggable="false"
+                        style="padding-left: 80px; position: absolute;cursor: pointer; transform: scale(0.8)" />
+                    <div id="date">
+                    </div>
+                </div>
+                <div id="news">
+                    NEWS (IN DEV)
+                </div>
+                <!-- The news feature should have a clear function to clear the news one has already seen or maybe popup the news viewer
+                in a new window -->
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="node_modules/alertifyjs/build/alertify.min.js"></script>
+    <script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
+    <script>
+        require('./render.js')
+    </script>
+</body>
+
+</html>

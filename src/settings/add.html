@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="add.css" />
+    <title>Iris</title>
+</head>
+
+<body style="-webkit-user-select: none;user-select: none">
+    <div id="main">
+        <div id="drag-region">
+            <div id="head">Scheduler</div>
+        </div>
+        <form id="form" style="padding-top: 20px;" onsubmit="hello()">
+            <label for="Event" style="font-size: medium; font-weight: bold; padding-right: 20px;">Event Name</label>
+            <input type="text" id="name"
+                style="color: black; border-radius: 5px; background-color: white; font-family: Helvetica, sans-serif;">
+            <br><br><br>
+            <label for="Start" style="font-size: medium; font-weight: bold; padding-right: 20px;">Start Date</label>
+            <input type="date" id="start" name="start"
+                style="color: black; border-radius: 5px; background-color: white; font-family: Helvetica, sans-serif; margin-left: 15px; width: 155px;">
+            <br><br><br>
+            <label for="End" style="font-size: medium; font-weight: bold; padding-right: 20px;">End Date</label>
+            <input type="date" id="end" name="end"
+                style="color: black; border-radius: 5px; background-color: white; font-family: Helvetica, sans-serif; margin-left: 20px; width: 160px;">
+            <br><br><br>
+            <label for="Time" style="font-size: medium; font-weight: bold; padding-right: 20px;">Time</label>
+            <input type="time" id="time" name="time"
+                style="color: black; border-radius: 5px; background-color: white; font-family: Helvetica, sans-serif; margin-left: 50px; width: 160px;">
+        </form>
+        <button id="but-can" style="margin-left:120px;">CANCEL</button>
+        <button id="but-sub">SUBMIT</button>
+    </div>
+
+    <script>
+        require('./add.js')
+    </script>
+</body>
+
+</html>
