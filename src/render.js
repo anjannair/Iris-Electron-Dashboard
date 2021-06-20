@@ -142,7 +142,7 @@ function online() {
     document.getElementById('speed').innerHTML = '<img src="icons/infinity.gif" style="padding-left:50px;padding-top:15px">';
     document.getElementById('speed-1').innerHTML = '<img src="icons/infinity.gif" style="padding-left:45px;padding-top:15px">';
     document.getElementById('wifi').innerHTML = '<img id="wifipng" src="icons/wifi.svg" style="transform: scale(1.0)">';
-    // speedt();
+    speedt();
     // eslint-disable-next-line no-undef
     alertify.success('Welcome back!👋', 5);
 }
@@ -373,18 +373,18 @@ $(function () {
 });
 
 //  printing the country
-// fetch('https://extreme-ip-lookup.com/json/')
-//     .then(res => res.json())
-//     .then(response => {
-//         document.getElementById('lcountry').innerHTML = response.country;
-//     })
-//     .catch((data, status) => {
-//         fs.appendFile('debug/logs.txt', new Date().toISOString() + ' - The user location could not be fetched because of - ' + data + status + '\n', function (err) {
-//             if (err) {
-//                 return console.error(err);
-//             }
-//         });
-//     });
+fetch(' https://am.i.mullvad.net/json')
+    .then(res => res.json())
+    .then(response => {
+        document.getElementById('lcountry').innerHTML = response.country;
+    })
+    .catch((data, status) => {
+        fs.appendFile('debug/logs.txt', new Date().toISOString() + ' - The user location could not be fetched because of - ' + data + status + '\n', function (err) {
+            if (err) {
+                return console.error(err);
+            }
+        });
+    });
 var count = 0;
 function check() {
     fetch('https://coderadio-admin.freecodecamp.org/api/live/nowplaying/coderadio')
