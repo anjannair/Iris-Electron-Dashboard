@@ -14,7 +14,7 @@
     "node-wifi": "^2.0.14"
   },
   "devDependencies": {
-    "electron": "^13.1.6",
+    "electron": "^13.1.7",
     "eslint": "^7.29.0"
   }
 }
